@@ -55,7 +55,7 @@ CREATE TABLE `etudiant` (
   `email` varchar(50) NOT NULL,
   `mdp` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -64,7 +64,7 @@ CREATE TABLE `etudiant` (
 
 LOCK TABLES `etudiant` WRITE;
 /*!40000 ALTER TABLE `etudiant` DISABLE KEYS */;
-INSERT INTO `etudiant` VALUES (1,'Alain','Soral','alain.robert@gmail.com','abcdef'),(2,'','','',''),(6,'Bob','Soral','alain.rabert@gmail.com','ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb4'),(7,'ABVC','azeaeaz','root','fb8e20fc2e4c3f248c60c39bd652f3c1347298bb977b8b4d59'),(8,'Eraaa','Soral','soral','a52d159f262b2c6ddb724a61840befc36eb30c88877a4030b65cbe86298449c9'),(9,'Eraaa','Soral','soral','a52d159f262b2c6ddb724a61840befc36eb30c88877a4030b65cbe86298449c9'),(10,'','','','e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855'),(11,'','','','e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855'),(12,'','','','e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855'),(13,'','','','e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855'),(14,'','','','e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855'),(15,'','','','e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855'),(16,'','','','e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855'),(17,'','','','e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855'),(18,'','','','e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855'),(19,'','','','e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855'),(20,'','','','e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855');
+INSERT INTO `etudiant` VALUES (1,'Alain','Soral','alain.robert@gmail.com','abcdef'),(2,'Jean','Castex','castex@gouv.fr',''),(6,'Bob','Soral','alain.rabert@gmail.com','ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb4'),(7,'ABVC','azeaeaz','root','fb8e20fc2e4c3f248c60c39bd652f3c1347298bb977b8b4d59'),(8,'Eraaa','Soral','soral','a52d159f262b2c6ddb724a61840befc36eb30c88877a4030b65cbe86298449c9'),(9,'Eraaa','Soral','soral','a52d159f262b2c6ddb724a61840befc36eb30c88877a4030b65cbe86298449c9'),(10,'Simon','Lacroix','','e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855');
 /*!40000 ALTER TABLE `etudiant` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -91,7 +91,7 @@ CREATE TABLE `inscription` (
 
 LOCK TABLES `inscription` WRITE;
 /*!40000 ALTER TABLE `inscription` DISABLE KEYS */;
-INSERT INTO `inscription` VALUES (1,1),(1,2),(1,8),(2,2),(2,8),(3,2),(3,8);
+INSERT INTO `inscription` VALUES (1,1),(1,2),(1,8),(2,8),(3,2),(3,8);
 /*!40000 ALTER TABLE `inscription` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -104,4 +104,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-05-25 11:15:49
+-- Dump completed on 2022-05-25 14:36:35

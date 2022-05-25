@@ -32,7 +32,7 @@
     <?php } else { ?>
         <p>Vous n'êtes inscrit à aucun cours</p>
     <?php } ?>
-    <a href="<?= _URL ?>/controllerRegister/modelLogout">Se déconnecter</a>
+    <a href="<?= _URL_LOGOUT ?>">Se déconnecter</a>
 
 </body>
 

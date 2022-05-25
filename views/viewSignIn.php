@@ -10,11 +10,11 @@
 
 <body>
     <h1>Connexion</h1>
-    <form action="<?= _URL ?>/controllerRegister/modelLogin" method="POST">
+    <form action="<?= _URL_LOGIN ?>" method="POST">
         <input type="text" name="mail" placeholder="E-Mail"><br><br>
         <input type="password" name="mdp" placeholder="Mot de Passe"><br><br>
         <input type="submit" value="Connexion">
-        <a href="<?= _URL ?>/views/viewAddEtudiant.php" value="S'enregistrer">
+        <a href="<?= _URL_REGISTER ?>" value="S'enregistrer">
             <btn>S'enregistrer</btn>
         </a>
     </form>

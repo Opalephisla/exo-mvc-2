@@ -1,16 +1,12 @@
 <?php
+require_once("configs/config.php");
 
-function connexionBDD(){
-    $host = "localhost";
-    $db_name = "school";
-    $username = "root";
-    $password = "";
-    
-        try{
-            $bddPDO = new PDO('mysql:host='.$host.';dbname='.$db_name.'', $username, $password);
-            $bddPDO->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            return $bddPDO;
-        } catch(PDOException $exception){
-            echo "Erreur de connexion: ".$exception->getMessage();
-        }
+function connexionBDD()
+{
+    try {
+        $bdd = new PDO(_DB_DSN, _DB_USER, _DB_PASS, _DB_OPTIONS);
+    } catch (Exception $e) {
+        die('Erreur : ' . $e->getMessage());
+    }
+    return $bdd;
 }

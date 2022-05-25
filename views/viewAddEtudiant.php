@@ -10,7 +10,7 @@
 
 <body>
     <h1>S'inscrire</h1>
-    <form action="../controllerRegister/modelRegister" method="POST">
+    <form action="../controllerSignInUp/modelRegister" method="POST">
         <input type="text" name="nom" placeholder="Nom"><br><br>
         <input type="text" name="prenom" placeholder="Préom"><br><br>
         <input type="text" name="mail" placeholder="E-Mail"><br><br>
