@@ -92,14 +92,24 @@ function register($form)
 {
     $pdo = connexionBDD();
     $sql = "INSERT INTO etudiant (nom, prenom, email, mdp) VALUES (:nom, :prenom, :email, :mdp)";
-    $sth = $pdo->prepare($sql);
-    $hash = hash('sha256', $form["mdp"]);
-    $sth->bindParam(':nom', $form["nom"]);
-    $sth->bindParam(':prenom', $form["prenom"]);
-    $sth->bindParam(':email', $form["mail"]);
-    $sth->bindParam(':mdp', $hash);
-    $sth->execute();
-    require("views/viewSignIn.php");
+    $sql2 = "SELECT * FROM etudiant WHERE email=?";
+    $sth2 = $pdo->prepare($sql2);
+    $sth2->execute(array($form["mail"]));
+    $data = $sth2->fetch();
+    if ($data) {
+        require("views/viewAddEtudiant.php");
+        echo "<br>Cet email est déjà utilisé";
+    } else {
+        $hashed = hash('sha256', $form["mdp"]);
+        $sth = $pdo->prepare($sql);
+        $sth->bindParam(':nom', $form["nom"]);
+        $sth->bindParam(':prenom', $form["prenom"]);
+        $sth->bindParam(':email', $form["mail"]);
+        $sth->bindParam(':mdp', $hashed);
+        $sth->execute();
+        require("views/viewSignIn.php");
+        echo "<br>Vous êtes inscrit";
+    }
 }
 
 function modelRegister()
@@ -107,8 +117,5 @@ function modelRegister()
     $result = register($_POST);
     if ($result) {
         require("views/viewSignIn.php");
-    } else {
-        require("views/viewAddEtudiant.php");
-        echo "<br>Cet email est déjà utilisé";
     }
 }

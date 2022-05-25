@@ -16,7 +16,7 @@
         <input type="text" name="mail" placeholder="E-Mail"><br><br>
         <input type="text" name="mdp" placeholder="Mot de Passe"><br><br>
         <input type="submit" value="S'enregistrer">
-        <a href="<?= _URL ?>/views/viewSignIn.php" value="Connexion">
+        <a href="../" value="Connexion">
             <btn>Connexion</btn>
         </a>
     </form>

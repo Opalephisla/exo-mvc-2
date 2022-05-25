@@ -54,15 +54,3 @@ function supprimeEtudiant($id)
     $stmt = $bddPDO->prepare($requete);
     $stmt->execute(array($id));
 }
-
-function logEtudiant($post)
-{
-    $m = $_POST['email'];
-    $c = $_POST['mdp'];
-    $bddPDO = connexionBDD();
-    $requete = "SELECT * FROM etudiant WHERE email=? AND mdp=?";
-    $stmt = $bddPDO->prepare($requete);
-    $stmt->execute(array($m, $c));
-    $data = $stmt->fetch(PDO::FETCH_ASSOC);
-    return $data;
-}
